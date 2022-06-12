@@ -43,11 +43,15 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "gatsby build --prefix-paths",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.0.5"
   },
+  "homepage": "https://dispersioned.github.io/web-dentis/",
   "engines": {
     "node": ">= 14.15.0"
   }

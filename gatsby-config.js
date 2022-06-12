@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/web-dentis',
   siteMetadata: {
     title: "Gatsby + Netlify CMS Starter",
     description:
