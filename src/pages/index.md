@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Let's test first admin change
+title: Test Test test
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
