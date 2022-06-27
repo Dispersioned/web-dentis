@@ -1,6 +1,6 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { v4 } from "uuid";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { v4 } from 'uuid';
 
 const Testimonials = ({ testimonials }) => (
   <div>
@@ -21,7 +21,7 @@ Testimonials.propTypes = {
     PropTypes.shape({
       quote: PropTypes.string,
       author: PropTypes.string,
-    })
+    }),
   ),
 };
 
