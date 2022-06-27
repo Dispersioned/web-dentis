@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import useSiteMetadata from './SiteMetadata';
 import './all.sass';
 
-const TemplateWrapper = ({ children }) => {
+const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
@@ -15,13 +15,28 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
-        <link rel="apple-touch-icon" sizes="180x180" href={`${withPrefix('/')}img/apple-touch-icon.png`} />
-        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/favicon-32x32.png`} sizes="32x32" />
-        <link rel="icon" type="image/png" href={`${withPrefix('/')}img/favicon-16x16.png`} sizes="16x16" />
-
-        <link rel="mask-icon" href={`${withPrefix('/')}img/safari-pinned-tab.svg`} color="#ff4400" />
-        <meta name="theme-color" content="#fff" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${withPrefix('/')}img/dentis/favicon/apple-touch-icon.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={`${withPrefix('/')}img/dentis/favicon/favicon-32x32.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={`${withPrefix('/')}img/dentis/favicon/favicon-16x16.png`}
+        />
+        <link rel="manifest" href={`${withPrefix('/')}img/dentis/favicon/site.webmanifest`} />
+        <link rel="mask-icon" href={`${withPrefix('/')}img/dentis/favicon/safari-pinned-tab.svg`} color="#1c7d72" />
+        <meta name="msapplication-TileColor" content="#ffc40d" />
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
@@ -35,4 +50,4 @@ const TemplateWrapper = ({ children }) => {
   );
 };
 
-export default TemplateWrapper;
+export default Layout;
