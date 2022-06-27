@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: '/web-dentis',
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description: 'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    title: 'Dentis - Стоматология города Ростов-на-Дону',
+    description: 'Dentis - стоматология города Ростов-на-Дону, лечащая зубы уже более 6 лет',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
