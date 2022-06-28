@@ -8,6 +8,7 @@ export const NavLinks = styled('ul')`
   justify-content: flex-start;
 
   @media (max-width: 1400px) {
+    justify-content: center;
     grid-gap: 10px;
     grid-auto-flow: row;
   }
@@ -20,6 +21,12 @@ export const NavLink = styled(Link)`
   padding: 5px 10px;
   color: ${(props) => props.theme.palette.primary.dark};
   text-transform: uppercase;
+
+  @media (max-width: 1400px) {
+    p {
+      font-size: 25px;
+    }
+  }
 
   &::before {
     content: '';

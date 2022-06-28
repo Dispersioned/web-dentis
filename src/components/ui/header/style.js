@@ -20,12 +20,15 @@ export const Logo = styled('img')`
   width: 180px;
 `;
 
-export const MobileNavigation = styled(Collapse)`
+export const MobileNavigation = styled('div')`
   position: fixed;
   left: 0;
-  top: 0;
+  top: ${(props) => (props.active ? '0' : '-100%')};
+  padding: 80px 15px 20px;
   background-color: #fff;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 999;
+  transition: all 0.3s ease;
+  overflow: auto;
 `;
