@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 export const NavLinks = styled('ul')`
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 15px;
+  grid-gap: 20px;
+  justify-content: flex-start;
 `;
 
 export const NavLink = styled(Link)`

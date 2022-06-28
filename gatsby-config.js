@@ -19,7 +19,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Poppins',
+            family: 'Nunito',
             weights: ['400', '700'],
           },
         ],

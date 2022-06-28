@@ -1,8 +1,9 @@
+import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
 import React from 'react';
 
 import logoIcon from '../../../img/dentis/logo.svg';
-import Navigation from '../header-navigation/HeaderNavigation';
+import HeaderNavigation from '../header-navigation/HeaderNavigation';
 import { Content, Logo, Wrapper } from './style';
 
 const Header = () => {
@@ -21,7 +22,18 @@ const Header = () => {
         <Link to="/">
           <Logo src={logoIcon} alt="logo" />
         </Link>
-        <Navigation items={navLinks} />
+        <HeaderNavigation items={navLinks} />
+        <div>
+          <Button variant="text" href="tel:+79385058423">
+            <Typography fontSize={20}>+7 (938) 505 84 23</Typography>
+          </Button>
+          ]
+          <Button variant="contained">
+            <Typography fontSize={20} fontWeight="bold">
+              Записаться
+            </Typography>
+          </Button>
+        </div>
       </Content>
     </Wrapper>
   );
