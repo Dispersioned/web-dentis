@@ -1,10 +1,13 @@
-import { Button, Collapse, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
 import HeaderBurger from '../header-burger/HeaderBurger';
+import HeaderForm from '../header-form/HeaderForm';
 import HeaderNavigation from '../header-navigation/HeaderNavigation';
 import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
 
@@ -19,6 +22,7 @@ const Header = () => {
   ];
 
   const [isActive, setIsActive] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const size = useWindowSize();
 
   return (
@@ -48,6 +52,7 @@ const Header = () => {
             </MobileNavigation>
           </>
         )}
+        <HeaderForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
       </Content>
     </Wrapper>
   );
