@@ -1,8 +1,9 @@
 import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 
 import logoIcon from '../../../img/dentis/logo.svg';
+import HeaderBurger from '../header-burger/HeaderBurger';
 import HeaderNavigation from '../header-navigation/HeaderNavigation';
 import { Content, Logo, Wrapper } from './style';
 
@@ -15,6 +16,8 @@ const Header = () => {
     { text: 'Фотогалерея', to: '/photos' },
     { text: 'Документы', to: '/documents' },
   ];
+
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <Wrapper position="sticky" top={0}>
