@@ -6,6 +6,10 @@ export const NavLinks = styled('ul')`
   grid-auto-flow: column;
   grid-gap: 20px;
   justify-content: flex-start;
+
+  @media (max-width: 1400px) {
+    grid-gap: 10px;
+  }
 `;
 
 export const NavLink = styled(Link)`
