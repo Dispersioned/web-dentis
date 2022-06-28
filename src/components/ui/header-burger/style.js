@@ -7,7 +7,7 @@ export const Body = styled('div')`
   position: relative;
   cursor: pointer;
   justify-self: flex-end;
-  z-index: 1000;
+  z-index: 1001;
 
   &::before,
   &::after,

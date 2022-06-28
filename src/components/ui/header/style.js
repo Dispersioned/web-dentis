@@ -2,7 +2,18 @@ import { AppBar, Collapse, styled } from '@mui/material';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled(AppBar)`
-  background-color: #fff;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+  }
 `;
 
 export const Content = styled('div')`
@@ -15,7 +26,7 @@ export const Content = styled('div')`
 
 export const Logo = styled('img')`
   position: relative;
-  z-index: 1000;
+  z-index: 1001;
   height: 60px;
   width: 180px;
 `;
@@ -31,4 +42,9 @@ export const MobileNavigation = styled('div')`
   z-index: 999;
   transition: all 0.3s ease;
   overflow: auto;
+`;
+
+export const Buttons = styled('div')`
+  position: relative;
+  z-index: 1001;
 `;

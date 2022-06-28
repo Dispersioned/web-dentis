@@ -6,7 +6,7 @@ import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
 import HeaderBurger from '../header-burger/HeaderBurger';
 import HeaderNavigation from '../header-navigation/HeaderNavigation';
-import { Content, Logo, MobileNavigation, Wrapper } from './style';
+import { Buttons, Content, Logo, MobileNavigation, Wrapper } from './style';
 
 const Header = () => {
   const navLinks = [
@@ -20,7 +20,6 @@ const Header = () => {
 
   const [isActive, setIsActive] = useState(false);
   const size = useWindowSize();
-  console.log(size);
 
   return (
     <Wrapper position="sticky" top={0}>
@@ -31,7 +30,7 @@ const Header = () => {
         {size.width >= 1400 ? (
           <>
             <HeaderNavigation items={navLinks} />
-            <div>
+            <Buttons>
               <Button variant="text" href="tel:+79385058423">
                 <Typography fontSize={20}>+7 (938) 505 84 23</Typography>
               </Button>
@@ -41,7 +40,7 @@ const Header = () => {
                   Записаться
                 </Typography>
               </Button>
-            </div>
+            </Buttons>
           </>
         ) : (
           <>

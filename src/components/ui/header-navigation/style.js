@@ -2,6 +2,8 @@ import { styled } from '@mui/material';
 import { Link } from 'gatsby';
 
 export const NavLinks = styled('ul')`
+  position: relative;
+  z-index: 1001;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 20px;
