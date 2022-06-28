@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import '../styles/reset.css';
 import useSiteMetadata from './SiteMetadata';
-import './all.sass';
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
