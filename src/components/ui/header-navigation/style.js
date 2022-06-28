@@ -9,6 +9,7 @@ export const NavLinks = styled('ul')`
 
   @media (max-width: 1400px) {
     grid-gap: 10px;
+    grid-auto-flow: row;
   }
 `;
 

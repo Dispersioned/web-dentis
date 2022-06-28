@@ -6,6 +6,8 @@ export const Body = styled('div')`
   height: 50px;
   position: relative;
   cursor: pointer;
+  justify-self: flex-end;
+  z-index: 1000;
 
   &::before,
   &::after,

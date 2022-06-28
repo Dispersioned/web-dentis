@@ -1,4 +1,4 @@
-import { AppBar, styled } from '@mui/material';
+import { AppBar, Collapse, styled } from '@mui/material';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled(AppBar)`
@@ -14,6 +14,18 @@ export const Content = styled('div')`
 `;
 
 export const Logo = styled('img')`
+  position: relative;
+  z-index: 1000;
   height: 60px;
   width: 180px;
+`;
+
+export const MobileNavigation = styled(Collapse)`
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
 `;
