@@ -28,7 +28,9 @@ export const Logo = styled('img')`
   position: relative;
   z-index: 1001;
   height: 60px;
-  width: 180px;
+  @media (max-width: 991px) {
+    height: 50px;
+  }
 `;
 
 export const MobileNavigation = styled('div')`
