@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+    <ThemeProvider theme={theme}>
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
@@ -47,6 +48,7 @@ const Layout = ({ children }) => {
       <div>{children}</div>
       <Footer />
     </div>
+    </ThemeProvider>
   );
 };
 
