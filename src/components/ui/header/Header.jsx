@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import logoIcon from '../../../img/dentis/logo.svg';
-import Navigation from '../navigation/Navigation';
+import Navigation from '../header-navigation/HeaderNavigation';
 import { Content, Logo, Wrapper } from './style';
 
 const Header = () => {

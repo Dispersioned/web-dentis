@@ -3,7 +3,7 @@ import React from 'react';
 
 import { NavLink, NavLinks } from './style';
 
-const Navigation = ({ items }) => {
+const HeaderNavigation = ({ items }) => {
   return (
     <nav>
       <NavLinks>
@@ -19,4 +19,4 @@ const Navigation = ({ items }) => {
   );
 };
 
-export default Navigation;
+export default HeaderNavigation;
