@@ -1,4 +1,4 @@
-import { AppBar, Collapse, styled } from '@mui/material';
+import { AppBar, Button, Collapse, styled } from '@mui/material';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled(AppBar)`
@@ -49,4 +49,12 @@ export const MobileNavigation = styled('div')`
 export const Buttons = styled('div')`
   position: relative;
   z-index: 1001;
+`;
+
+export const ContactBtn = styled(Button)`
+  font-size: 20px;
+`;
+
+export const SubmitBtn = styled(Button)`
+  margin-top: 1.5rem;
 `;

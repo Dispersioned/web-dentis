@@ -6,7 +6,7 @@ import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
 import HeaderBurger from '../header-burger/HeaderBurger';
 import HeaderNavigation from '../header-navigation/HeaderNavigation';
-import { Buttons, Content, Logo, MobileNavigation, Wrapper } from './style';
+import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
 
 const Header = () => {
   const navLinks = [
@@ -31,15 +31,13 @@ const Header = () => {
           <>
             <HeaderNavigation items={navLinks} />
             <Buttons>
-              <Button variant="text" href="tel:+79385058423">
-                <Typography fontSize={20}>+7 (938) 505 84 23</Typography>
-              </Button>
+              <ContactBtn variant="text" href="tel:+79385058423">
+                +7 (938) 505 84 23
+              </ContactBtn>
               ]
-              <Button variant="contained">
-                <Typography fontSize={20} fontWeight="bold">
-                  Записаться
-                </Typography>
-              </Button>
+              <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                Записаться
+              </ContactBtn>
             </Buttons>
           </>
         ) : (
