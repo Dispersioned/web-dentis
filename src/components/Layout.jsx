@@ -3,7 +3,7 @@ import { withPrefix } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Footer from '../components/Footer';
+import Footer from './Footer';
 import '../styles/reset.css';
 import { theme } from '../styles/theme';
 import useSiteMetadata from './SiteMetadata';
