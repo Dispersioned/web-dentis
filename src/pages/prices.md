@@ -2,7 +2,7 @@
 templateKey: prices-page
 pricelist:
   - title: Консультация
-    services:
+    positions:
     - code: B01:065.003
       name: Прием (осмотр, консультация) зубного врача первичный
       price: 300
@@ -13,12 +13,12 @@ pricelist:
       name: Прием (осмотр, консультация) врача-стоматолога первичный
       price: 300
   - title: Рентгенология
-    services:
+    positions:
     - code: А06:07.012
       name: Радиовизиография
       price: 350
   - title: Профилактика
-    services:
+    positions:
     - code: А11:07.023
       name: Применение метода серебрения зуба
       price: 500
