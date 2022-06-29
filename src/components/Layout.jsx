@@ -1,11 +1,11 @@
-import { ThemeProvider } from '@mui/material';
+import { Container, ThemeProvider } from '@mui/material';
 import { withPrefix } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Footer from './Footer';
 import '../styles/reset.css';
 import { theme } from '../styles/theme';
+import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
 import Header from './ui/header/Header';
 
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
           <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
         </Helmet>
         <Header />
-        <div>{children}</div>
+        <Container maxWidth="lg">{children}</Container>
         <Footer />
       </div>
     </ThemeProvider>

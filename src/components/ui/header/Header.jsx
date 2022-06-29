@@ -1,6 +1,6 @@
 import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -15,13 +15,18 @@ const Header = () => {
   const navLinks = [
     { text: 'О нас', to: '/about-us' },
     { text: 'Наши врачи', to: '/specialists' },
-    { text: 'Услуги и цены', to: '/prices' },
+    { text: 'Услуги', to: '/services' },
+    { text: 'Цены', to: '/prices' },
     { text: 'Акции', to: '/offers' },
     { text: 'Фотогалерея', to: '/photos' },
     { text: 'Документы', to: '/documents' },
   ];
 
   const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = isActive ? 'hidden' : 'auto';
+  }, [isActive]);
+
   const [isFormOpen, setIsFormOpen] = useState(false);
   const size = useWindowSize();
 
@@ -31,7 +36,7 @@ const Header = () => {
         <Link to="/">
           <Logo src={logoIcon} alt="logo" />
         </Link>
-        {size.width >= 1400 ? (
+        {size.width > 1400 ? (
           <>
             <HeaderNavigation items={navLinks} />
             <Buttons>

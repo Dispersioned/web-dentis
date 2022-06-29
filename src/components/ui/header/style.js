@@ -2,8 +2,6 @@ import { AppBar, Button, Collapse, styled } from '@mui/material';
 import { Link } from 'gatsby';
 
 export const Wrapper = styled(AppBar)`
-  position: relative;
-
   &::before {
     content: '';
     position: absolute;
@@ -33,12 +31,15 @@ export const Logo = styled('img')`
   }
 `;
 
-export const MobileNavigation = styled('div')`
+export const MobileNavigation = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'active',
+})`
   position: fixed;
   left: 0;
   top: ${(props) => (props.active ? '0' : '-100%')};
   padding: 80px 15px 20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
   width: 100%;
   height: 100vh;
   z-index: 999;
