@@ -33,7 +33,9 @@ export const Logo = styled('img')`
   }
 `;
 
-export const MobileNavigation = styled('div')`
+export const MobileNavigation = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'active',
+})`
   position: fixed;
   left: 0;
   top: ${(props) => (props.active ? '0' : '-100%')};

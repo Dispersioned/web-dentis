@@ -1,6 +1,8 @@
 import { styled } from '@mui/material';
 
-export const Body = styled('div')`
+export const Body = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'active',
+})`
   display: block;
   width: 50px;
   height: 50px;

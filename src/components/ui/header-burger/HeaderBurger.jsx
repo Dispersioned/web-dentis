@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Body } from './style';
 
-const HeaderBurger = ({ active, ...rest }) => {
+const HeaderBurger = ({ active, onClick }) => {
   return (
-    <Body active={active} {...rest}>
+    <Body active={active} onClick={onClick}>
       <span />
     </Body>
   );
