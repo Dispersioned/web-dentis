@@ -1,6 +1,6 @@
 import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -23,6 +23,10 @@ const Header = () => {
   ];
 
   const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = isActive ? 'hidden' : 'auto';
+  }, [isActive]);
+
   const [isFormOpen, setIsFormOpen] = useState(false);
   const size = useWindowSize();
 
@@ -32,7 +36,7 @@ const Header = () => {
         <Link to="/">
           <Logo src={logoIcon} alt="logo" />
         </Link>
-        {size.width >= 1400 ? (
+        {size.width > 1400 ? (
           <>
             <HeaderNavigation items={navLinks} />
             <Buttons>
