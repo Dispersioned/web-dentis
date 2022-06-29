@@ -15,7 +15,8 @@ const Header = () => {
   const navLinks = [
     { text: 'О нас', to: '/about-us' },
     { text: 'Наши врачи', to: '/specialists' },
-    { text: 'Услуги и цены', to: '/prices' },
+    { text: 'Услуги', to: '/services' },
+    { text: 'Цены', to: '/prices' },
     { text: 'Акции', to: '/offers' },
     { text: 'Фотогалерея', to: '/photos' },
     { text: 'Документы', to: '/documents' },
