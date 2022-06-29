@@ -48,7 +48,7 @@ const Header = () => {
         ) : (
           <>
             <HeaderBurger active={isActive} onClick={() => setIsActive(!isActive)} />
-            <MobileNavigation>
+            <MobileNavigation active={isActive}>
               <HeaderNavigation items={navLinks} />
             </MobileNavigation>
           </>
