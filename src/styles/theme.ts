@@ -12,4 +12,13 @@ export const theme = createTheme({
       // main: '#1B998F',
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          fontWeight: 'bold',
+        },
+      },
+    },
+  },
 });

@@ -1,12 +1,15 @@
-import { Button, Collapse, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
 import HeaderBurger from '../header-burger/HeaderBurger';
+import HeaderForm from '../header-form/HeaderForm';
 import HeaderNavigation from '../header-navigation/HeaderNavigation';
-import { Buttons, Content, Logo, MobileNavigation, Wrapper } from './style';
+import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
 
 const Header = () => {
   const navLinks = [
@@ -19,6 +22,7 @@ const Header = () => {
   ];
 
   const [isActive, setIsActive] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const size = useWindowSize();
 
   return (
@@ -31,15 +35,13 @@ const Header = () => {
           <>
             <HeaderNavigation items={navLinks} />
             <Buttons>
-              <Button variant="text" href="tel:+79385058423">
-                <Typography fontSize={20}>+7 (938) 505 84 23</Typography>
-              </Button>
+              <ContactBtn variant="text" href="tel:+79385058423">
+                +7 (938) 505 84 23
+              </ContactBtn>
               ]
-              <Button variant="contained">
-                <Typography fontSize={20} fontWeight="bold">
-                  Записаться
-                </Typography>
-              </Button>
+              <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                Записаться
+              </ContactBtn>
             </Buttons>
           </>
         ) : (
@@ -50,6 +52,7 @@ const Header = () => {
             </MobileNavigation>
           </>
         )}
+        <HeaderForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
       </Content>
     </Wrapper>
   );
