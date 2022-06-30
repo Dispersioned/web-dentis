@@ -20,7 +20,7 @@ const InfoIndexPage = () => {
 
   return (
     <Layout>
-      <PageTitle title="Клиентам" />
+      <PageTitle text="Клиентам" />
       <Content>
         {blocks.map((block) => (
           <Block key={block.text} variant="contained" component={Link} to={block.link}>

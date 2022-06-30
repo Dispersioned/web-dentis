@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-const PageTitle = ({ title }) => {
+const PageTitle = ({ text }) => {
   return (
     <Typography component="h1" variant="h2" style={{ padding: '1rem 0' }}>
-      {title}
+      {text}
     </Typography>
   );
 };

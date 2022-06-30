@@ -24,7 +24,7 @@ const NotFoundPage = ({ data }) => {
 
   return (
     <Layout>
-      <PageTitle title="Прайс" />
+      <PageTitle text="Прайс" />
       {pricelist.map((service) => (
         <Accordion key={service.title}>
           <Summary expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}>
