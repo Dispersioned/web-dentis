@@ -16,6 +16,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Body from '../../components/prices-page/body/Body';
 import Head from '../../components/prices-page/head/Head';
+import PageTitle from '../../components/ui/page-title/PageTitle';
 import { Details, Heading, Summary } from './style';
 
 const NotFoundPage = ({ data }) => {
@@ -23,6 +24,7 @@ const NotFoundPage = ({ data }) => {
 
   return (
     <Layout>
+      <PageTitle title="Прайс" />
       {pricelist.map((service) => (
         <Accordion key={service.title}>
           <Summary expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}>
