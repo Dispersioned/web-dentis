@@ -1,8 +1,8 @@
-import { Button, Grid, Paper, Typography } from '@mui/material';
 import { Link } from 'gatsby';
 import React from 'react';
 
 import Layout from '../../components/Layout';
+import PageTitle from '../../components/ui/page-title/PageTitle';
 import { Block, Content } from './style';
 
 const InfoIndexPage = () => {
@@ -20,9 +20,7 @@ const InfoIndexPage = () => {
 
   return (
     <Layout>
-      <Typography component="h1" variant="h2" style={{ padding: '1rem 0' }}>
-        Клиентам
-      </Typography>
+      <PageTitle title="Клиентам" />
       <Content>
         {blocks.map((block) => (
           <Block key={block.text} variant="contained" component={Link} to={block.link}>
