@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import Layout from '../../components/Layout';
+import { Block, Content } from './style';
 
 const InfoIndexPage = () => {
   const blocks = [
@@ -19,16 +20,16 @@ const InfoIndexPage = () => {
 
   return (
     <Layout>
-      <Typography variant="h1">Клиентам</Typography>
-      <Grid container spacing={3}>
+      <Typography component="h1" variant="h2" style={{ padding: '1rem 0' }}>
+        Клиентам
+      </Typography>
+      <Content>
         {blocks.map((block) => (
-          <Grid item xs={4}>
-            <Button component={Link} to={block.link}>
-              <Typography>{block.text}</Typography>
-            </Button>
-          </Grid>
+          <Block key={block.text} variant="contained" component={Link} to={block.link}>
+            {block.text}
+          </Block>
         ))}
-      </Grid>
+      </Content>
     </Layout>
   );
 };
