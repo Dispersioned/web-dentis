@@ -19,7 +19,7 @@ import Head from '../../components/prices-page/head/Head';
 import PageTitle from '../../components/ui/page-title/PageTitle';
 import { Details, Heading, Summary } from './style';
 
-const NotFoundPage = ({ data }) => {
+const PricesPageTemplate = ({ data }) => {
   const pricelist = data.markdownRemark.frontmatter.pricelist;
 
   return (
@@ -47,7 +47,7 @@ const NotFoundPage = ({ data }) => {
   );
 };
 
-export default NotFoundPage;
+export default PricesPageTemplate;
 
 export const query = graphql`
   query pricesPageQuery {
