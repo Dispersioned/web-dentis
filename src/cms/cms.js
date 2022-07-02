@@ -7,4 +7,4 @@ import PaymentConditionsPreview from './preview-templates/PaymentConditionsPageP
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
-CMS.registerPreviewTemplate('payment-conditions', PaymentConditionsPreview);
+// CMS.registerPreviewTemplate('payment-conditions', PaymentConditionsPreview);
