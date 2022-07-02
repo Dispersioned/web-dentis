@@ -52,7 +52,11 @@ collections:
               label: Пункт,
               name: points,
               widget: list,
-              fields: [{ label: Текст, name: text, widget: markdown }],
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: text },
+                  { label: Текст, name: text, widget: text },
+                ],
             }
 
           # - { label: Image, name: image, widget: image }
