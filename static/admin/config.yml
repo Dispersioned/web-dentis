@@ -49,13 +49,13 @@ collections:
           - { label: Заголовок, name: title, widget: text }
           - { label: Подзаголовок, name: subtitle, widget: text }
           - {
-              label: Пункт,
+              label: Список пунктов,
               name: points,
               widget: list,
               fields:
                 [
                   { label: Заголовок, name: title, widget: text },
-                  { label: Текст, name: text, widget: text },
+                  { label: Текст, name: text, widget: text, required: false },
                 ],
             }
 
