@@ -8,7 +8,7 @@ import Subtitle from '../../components/info/subtitle/Subtitle';
 import PageTitle from '../../components/ui/page-title/PageTitle';
 
 export const PaymentConditionsPageTemplate = ({ props }) => {
-  const { title, subtitle, points } = props;
+  const { title, subtitle, points, payMethods } = props;
 
   return (
     <Layout>
@@ -20,6 +20,13 @@ export const PaymentConditionsPageTemplate = ({ props }) => {
             <strong>{`${index + 1}. ${point.title}`}</strong>
           </Typography>
           <Typography>{point.text}</Typography>
+        </Paragraph>
+      ))}
+
+      <Subtitle text="Формы оплаты" />
+      {payMethods.map((method, index) => (
+        <Paragraph key={index}>
+          <Typography>{`• ${method.text}`}</Typography>
         </Paragraph>
       ))}
     </Layout>
@@ -41,6 +48,9 @@ export const query = graphql`
         subtitle
         points {
           title
+          text
+        }
+        payMethods {
           text
         }
       }
