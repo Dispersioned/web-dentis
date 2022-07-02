@@ -16,6 +16,9 @@ export const PaymentConditionsPageTemplate = ({ props }) => {
       <Subtitle text={subtitle} />
       {points.map((point, index) => (
         <Paragraph key={index}>
+          <Typography>
+            <strong>{`${index + 1}. ${point.title}`}</strong>
+          </Typography>
           <Typography>{point.text}</Typography>
         </Paragraph>
       ))}
@@ -37,6 +40,7 @@ export const query = graphql`
         title
         subtitle
         points {
+          title
           text
         }
       }
