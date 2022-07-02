@@ -58,6 +58,12 @@ collections:
                   { label: Текст, name: text, widget: text, required: false },
                 ],
             }
+          - {
+              label: Формы оплаты,
+              name: payMethods,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+            }
 
           # - { label: Image, name: image, widget: image }
           # - { label: Heading, name: heading, widget: string }
