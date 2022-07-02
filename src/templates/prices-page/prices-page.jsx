@@ -16,13 +16,15 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Body from '../../components/prices-page/body/Body';
 import Head from '../../components/prices-page/head/Head';
+import PageTitle from '../../components/ui/page-title/PageTitle';
 import { Details, Heading, Summary } from './style';
 
-const NotFoundPage = ({ data }) => {
+const PricesPageTemplate = ({ data }) => {
   const pricelist = data.markdownRemark.frontmatter.pricelist;
 
   return (
     <Layout>
+      <PageTitle text="Прайс" />
       {pricelist.map((service) => (
         <Accordion key={service.title}>
           <Summary expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}>
@@ -45,7 +47,7 @@ const NotFoundPage = ({ data }) => {
   );
 };
 
-export default NotFoundPage;
+export default PricesPageTemplate;
 
 export const query = graphql`
   query pricesPageQuery {
