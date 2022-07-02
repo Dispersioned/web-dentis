@@ -46,8 +46,8 @@ collections:
               widget: "hidden",
               default: "payment-conditions-page",
             }
-          - { label: Заголовок, name: title, widget: string }
-          - { label: Подзаголовок, name: subtitle, widget: string }
+          - { label: Заголовок, name: title, widget: text }
+          - { label: Подзаголовок, name: subtitle, widget: text }
           - {
               label: Пункт,
               name: points,
