@@ -3,7 +3,7 @@ import React from 'react';
 
 const PageTitle = ({ text }) => {
   return (
-    <Typography component="h1" variant="h2" style={{ padding: '1rem 0' }}>
+    <Typography component="h1" variant="h2" style={{ margin: '1.5rem 0' }}>
       {text}
     </Typography>
   );
