@@ -17,9 +17,9 @@ const Header = () => {
     { text: 'Наши врачи', to: '/specialists' },
     { text: 'Услуги', to: '/services' },
     { text: 'Цены', to: '/prices' },
+    { text: 'Клиентам', to: '/info' },
     { text: 'Акции', to: '/offers' },
     { text: 'Фотогалерея', to: '/photos' },
-    { text: 'Документы', to: '/documents' },
   ];
 
   const [isActive, setIsActive] = useState(false);
