@@ -3,7 +3,7 @@ import React from 'react';
 
 import Layout from '../../components/Layout';
 import PageTitle from '../../components/ui/page-title/PageTitle';
-import { Block, Content } from './style';
+import { Block, Content } from '../../styles/info/style.js';
 
 const InfoIndexPage = () => {
   const blocks = [
