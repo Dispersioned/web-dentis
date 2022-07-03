@@ -49,7 +49,7 @@ collections:
           - { label: Заголовок, name: title, widget: text }
           - { label: Подзаголовок, name: subtitle, widget: text }
           - {
-              label: Список пунктов,
+              label: Список,
               name: points,
               widget: list,
               fields:
