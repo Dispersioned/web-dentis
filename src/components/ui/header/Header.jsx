@@ -43,7 +43,6 @@ const Header = () => {
               <ContactBtn variant="text" href="tel:+79385058423">
                 +7 (938) 505 84 23
               </ContactBtn>
-              ]
               <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
                 Записаться
               </ContactBtn>
