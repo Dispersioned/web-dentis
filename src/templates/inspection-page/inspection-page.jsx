@@ -16,7 +16,7 @@ const InspectionPageTemplate = ({ data }) => {
       <Subtitle text={subtitle} />
       {controlAuthorities.map((item) => (
         <Paragraph>
-          <Typography style={{ fontWeight: 600 }}>{item.title}</Typography>
+          <Typography style={{ fontWeight: 600 }}>{item.name}</Typography>
           <Typography>{item.address}</Typography>
           <Typography>{item.phone}</Typography>
         </Paragraph>
@@ -34,7 +34,7 @@ export const query = graphql`
         title
         subtitle
         controlAuthorities {
-          title
+          name
           address
           phone
         }
