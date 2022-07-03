@@ -324,3 +324,44 @@ collections:
       #             },
       #           ],
       #       }
+
+      - file: "src/pages/info/free-help.md"
+        label: "Бесплатная помощь"
+        name: "free-help"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "free-help-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Заголовок 2,
+              name: subsubtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Список,
+              name: freeHelpClinics,
+              widget: list,
+              fields:
+                [
+                  { label: Название, name: title, widget: text },
+                  { label: Адрес, name: address, widget: text },
+                  { label: Контакты, name: phone, widget: text },
+                ],
+            }
