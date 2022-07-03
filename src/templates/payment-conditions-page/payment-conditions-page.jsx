@@ -41,7 +41,7 @@ const PaymentConditionsPage = ({ data }) => {
 export default PaymentConditionsPage;
 
 export const query = graphql`
-  query Query {
+  query paymentConditionsPageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "payment-conditions-page" } }) {
       frontmatter {
         title
