@@ -85,3 +85,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemarkFrontmatterTermsPoints implements Node {
+      subpoints: [MarkdownRemarkFrontmatterTermsPointsSubpoints]
+    }
+
+    type MarkdownRemarkFrontmatterTermsPointsSubpoints implements Node {
+      text: String
+    }
+  `;
+  createTypes(typeDefs);
+};
