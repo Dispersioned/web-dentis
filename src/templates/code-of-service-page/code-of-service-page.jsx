@@ -17,8 +17,8 @@ const getPointIndex = () => {
   };
 };
 
-export const CodeOfServicePageTemplate = ({ props }) => {
-  const { title, subtitle, terms } = props;
+export const CodeOfServicePageTemplate = ({ data }) => {
+  const { title, subtitle, terms } = data;
 
   const counter = getPointIndex();
 
