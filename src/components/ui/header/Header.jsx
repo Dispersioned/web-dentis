@@ -53,6 +53,14 @@ const Header = () => {
             <HeaderBurger active={isActive} onClick={() => setIsActive(!isActive)} />
             <MobileNavigation active={isActive}>
               <HeaderNavigation items={navLinks} />
+              <Buttons>
+                <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                  Записаться
+                </ContactBtn>
+                <ContactBtn variant="text" href="tel:+79385058423">
+                  +7 (938) 505 84 23
+                </ContactBtn>
+              </Buttons>
             </MobileNavigation>
           </>
         )}
