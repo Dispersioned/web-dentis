@@ -14,8 +14,8 @@ const InspectionPageTemplate = ({ data }) => {
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
-      {controlAuthorities.map((item) => (
-        <Paragraph>
+      {controlAuthorities.map((item, index) => (
+        <Paragraph key={index}>
           <Typography style={{ fontWeight: 600 }}>{item.name}</Typography>
           <Typography>{item.address}</Typography>
           <Typography>{item.phone}</Typography>

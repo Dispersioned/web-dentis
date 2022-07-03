@@ -50,7 +50,7 @@ export const CodeOfServicePageTemplate = ({ data }) => {
 
 const CodeOfServicePage = ({ data }) => {
   console.log(data);
-  return <CodeOfServicePageTemplate props={data.markdownRemark.frontmatter} />;
+  return <CodeOfServicePageTemplate data={data.markdownRemark.frontmatter} />;
 };
 
 export default CodeOfServicePage;
