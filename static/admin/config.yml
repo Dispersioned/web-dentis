@@ -49,7 +49,7 @@ collections:
           - { label: Заголовок, name: title, widget: text }
           - { label: Подзаголовок, name: subtitle, widget: text }
           - {
-              label: Список пунктов,
+              label: Список,
               name: points,
               widget: list,
               fields:
@@ -63,6 +63,30 @@ collections:
               name: payMethods,
               widget: list,
               fields: [{ label: Текст, name: text, widget: text }],
+            }
+
+      - file: "src/pages/info/inspection.md"
+        label: "Органы контроля"
+        name: "inspection"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "inspection-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - { label: Подзаголовок, name: subtitle, widget: text }
+          - {
+              label: Список,
+              name: controlAuthorities,
+              widget: list,
+              fields:
+                [
+                  { label: Название, name: name, widget: text },
+                  { label: Адрес, name: address, widget: text },
+                  { label: Контакты, name: phone, widget: text },
+                ],
             }
 
           # - { label: Image, name: image, widget: image }
