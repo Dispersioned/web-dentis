@@ -50,10 +50,19 @@ export const MobileNavigation = styled('div', {
 export const Buttons = styled('div')`
   position: relative;
   z-index: 1001;
+  @media (max-width: 1400px) {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    padding-top: 10px;
+  }
 `;
 
 export const ContactBtn = styled(Button)`
   font-size: 20px;
+  @media (max-width: 1400px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const SubmitBtn = styled(Button)`
