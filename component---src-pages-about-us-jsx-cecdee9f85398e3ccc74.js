@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_netlify_cms=self.webpackChunkgatsby_starter_netlify_cms||[]).push([[531],{755:function(e,t,n){n.r(t);var l=n(7294),s=n(6180);t.default=function(){return l.createElement(s.A,null,l.createElement("div",null,l.createElement("h1",null,"NOT FOUND"),l.createElement("p",null,"You just hit a route that doesn't exist... the sadness.")))}}}]);
+//# sourceMappingURL=component---src-pages-about-us-jsx-cecdee9f85398e3ccc74.js.map
