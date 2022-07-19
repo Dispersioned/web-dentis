@@ -345,7 +345,8 @@ collections:
           - {
               label: Описание,
               name: description,
-              widget: text,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
               required: false,
             }
           - {
@@ -386,7 +387,8 @@ collections:
           - {
               label: Описание,
               name: description,
-              widget: text,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
               required: false,
             }
           - {

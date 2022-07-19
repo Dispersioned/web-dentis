@@ -15,9 +15,11 @@ export const FreeHelpPageTemplate = ({ data }) => {
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
-      <Paragraph>
-        <Typography>{description}</Typography>
-      </Paragraph>
+      {description.map((data) => (
+        <Paragraph>
+          <Typography>{data.text}</Typography>
+        </Paragraph>
+      ))}
 
       <Paragraph>
         <Typography variant="h5" fontWeight="bold">
@@ -51,7 +53,9 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
-        description
+        description {
+          text
+        }
         subsubtitle
         freeHelpClinics {
           title

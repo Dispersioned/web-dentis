@@ -8,13 +8,19 @@ import { Subtitle } from '../../components/info/subtitle';
 import { PageTitle } from '../../components/ui/page-title';
 
 export const WarrantyPageTemplate = ({ props }) => {
-  const { title, subtitle, points, payMethods } = props;
+  const { title, subtitle, description } = props;
 
   return (
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
-      {points.map((point, index) => (
+      {description.map((data) => (
+        <Paragraph>
+          <Typography>{data.text}</Typography>
+        </Paragraph>
+      ))}
+
+      {/* {points.map((point, index) => (
         <Paragraph key={index}>
           <Typography>
             <strong>{`${index + 1}. ${point.title}`}</strong>
@@ -28,7 +34,7 @@ export const WarrantyPageTemplate = ({ props }) => {
         <Paragraph key={index}>
           <Typography>{`• ${method.text}`}</Typography>
         </Paragraph>
-      ))}
+      ))} */}
     </Layout>
   );
 };
@@ -46,12 +52,23 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
-        points {
-          title
+        description {
           text
         }
-        payMethods {
-          text
+        warrantyList {
+          title
+          notes {
+            text
+            sublist {
+              text
+            }
+          }
+          list {
+            text
+          }
+          description {
+            text
+          }
         }
       }
     }
