@@ -89,41 +89,41 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
-    type MarkdownRemarkFrontmatterControlAuthorities implements Node {
+    type MarkdownRemarkFrontmatterControlAuthorities {
       name: String
       address: String
       phone: String
     }
 
-    type MarkdownRemarkFrontmatterPoints implements Node {
+    type MarkdownRemarkFrontmatterPoints {
       title: String
       text: String
     }
 
-    type MarkdownRemarkFrontmatterPayMethods implements Node {
+    type MarkdownRemarkFrontmatterPayMethods {
       text: String
     }
 
-    type MarkdownRemarkFrontmatterTermsPoints implements Node {
+    type MarkdownRemarkFrontmatterTermsPoints {
       text: String
       subpoints: [MarkdownRemarkFrontmatterTermsPointsSubpoints]
     }
 
-    type MarkdownRemarkFrontmatterTermsPointsSubpoints implements Node {
+    type MarkdownRemarkFrontmatterTermsPointsSubpoints {
       text: String
     }
 
-    type MarkdownRemarkFrontmatterFreeHelpClinics implements Node {
+    type MarkdownRemarkFrontmatterFreeHelpClinics {
       title: String
       address: String
       phone: String
     }
 
-    type MarkdownRemarkFrontmatter implements Node {
+    type MarkdownRemarkFrontmatter {
       description: [MarkdownRemarkFrontmatterDescription]
     }
 
-    type MarkdownRemarkFrontmatterDescription implements Node {
+    type MarkdownRemarkFrontmatterDescription {
       text: String
     }
   `;
