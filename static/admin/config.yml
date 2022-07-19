@@ -365,3 +365,76 @@ collections:
                   { label: Контакты, name: phone, widget: text },
                 ],
             }
+
+      - file: "src/pages/info/guarantee.md"
+        label: "Гарантии"
+        name: "guarantee"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "guarantee-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Пункт гарантии,
+              name: guaranteeList,
+              widget: list,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: text },
+                  {
+                    label: Описание,
+                    name: description,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                  {
+                    label: Таблица,
+                    name: table,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Наименование, name: title, widget: string },
+                        {
+                          label: Срок гарантии,
+                          name: guaranteeTime,
+                          widget: string,
+                        },
+                        { label: Срок службы, name: lifeTime, widget: string },
+                      ],
+                    required: false,
+                  },
+                  {
+                    label: Примечание,
+                    name: notes,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Текст, name: text, widget: text },
+                        {
+                          label: Подпункт примечания,
+                          name: sublist,
+                          widget: list,
+                          fields: [{ label: Текст, name: text, widget: text }],
+                        },
+                      ],
+                    required: false,
+                  },
+                ],
+              required: false,
+            }
