@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import { graphql } from 'gatsby';
 import React from 'react';
 
@@ -8,7 +8,7 @@ import { Subtitle } from '../../components/info/subtitle';
 import { PageTitle } from '../../components/ui/page-title';
 
 export const WarrantyPageTemplate = ({ props }) => {
-  const { title, subtitle, description, contentTitle } = props;
+  const { title, subtitle, description, contentTitle, warrantyList } = props;
 
   return (
     <Layout>
@@ -21,21 +21,54 @@ export const WarrantyPageTemplate = ({ props }) => {
       ))}
       <Subtitle text={contentTitle} />
 
-      {/* {points.map((point, index) => (
+      {warrantyList.map(({ title, description, notes, table }, index) => (
         <Paragraph key={index}>
           <Typography>
-            <strong>{`${index + 1}. ${point.title}`}</strong>
+            <strong>{`${index + 1}. ${title}`}</strong>
           </Typography>
-          <Typography>{point.text}</Typography>
+
+          {description && description.map((data, index) => <Typography key={index}>{data.text}</Typography>)}
+
+          {table && (
+            <TableContainer style={{ margin: '1rem 0' }}>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell style={{ fontWeight: 600 }}>№ п/п</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>Наименование</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>Срок гарантии</TableCell>
+                    <TableCell style={{ fontWeight: 600 }}>Срок службы</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {table.map((cellData, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{index + 1}</TableCell>
+                      <TableCell>{cellData.title}</TableCell>
+                      <TableCell>{cellData.warrantyTime}</TableCell>
+                      <TableCell>{cellData.lifeTime}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          )}
+
+          {notes && (
+            <Paragraph>
+              <Typography fontWeight={600}>Примечания:</Typography>
+              {notes.map((note, index) => (
+                <>
+                  <Typography key={index}>
+                    <strong>{index + 1}.</strong> {note.text}
+                  </Typography>
+                  {note.sublist && note.sublist.map((item) => <Typography>- {item.text}</Typography>)}
+                </>
+              ))}
+            </Paragraph>
+          )}
         </Paragraph>
       ))}
-
-      <Subtitle text="Формы оплаты" />
-      {payMethods.map((method, index) => (
-        <Paragraph key={index}>
-          <Typography>{`• ${method.text}`}</Typography>
-        </Paragraph>
-      ))} */}
     </Layout>
   );
 };
@@ -65,8 +98,10 @@ export const query = graphql`
               text
             }
           }
-          list {
-            text
+          table {
+            title
+            warrantyTime
+            lifeTime
           }
           description {
             text

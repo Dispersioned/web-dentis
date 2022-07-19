@@ -126,6 +126,16 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MarkdownRemarkFrontmatterDescription {
       text: String
     }
+
+    type MarkdownRemarkFrontmatterWarrantyListTable {
+      title: String
+      warrantyTime: String
+      lifeTime: String
+    }
+
+    type MarkdownRemarkFrontmatterWarrantyList {
+      table: [MarkdownRemarkFrontmatterWarrantyListTable]
+    }
   `;
   createTypes(typeDefs);
 };
