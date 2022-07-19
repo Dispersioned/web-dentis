@@ -56,7 +56,7 @@ const CodeOfServicePage = ({ data }) => {
 export default CodeOfServicePage;
 
 export const query = graphql`
-  query codeOfServicePageQuery {
+  query CodeOfServicePageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "code-of-service-page" } }) {
       frontmatter {
         title

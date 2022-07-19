@@ -46,8 +46,8 @@ collections:
               widget: "hidden",
               default: "inspection-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: controlAuthorities,
@@ -70,8 +70,8 @@ collections:
               widget: "hidden",
               default: "payment-conditions-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: points,
@@ -99,8 +99,8 @@ collections:
               widget: "hidden",
               default: "code-of-service-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: terms,
@@ -345,12 +345,13 @@ collections:
           - {
               label: Описание,
               name: description,
-              widget: text,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
               required: false,
             }
           - {
-              label: Заголовок 2,
-              name: subsubtitle,
+              label: Заголовок содержания,
+              name: contentTitle,
               widget: text,
               required: false,
             }
@@ -364,4 +365,84 @@ collections:
                   { label: Адрес, name: address, widget: text },
                   { label: Контакты, name: phone, widget: text },
                 ],
+            }
+
+      - file: "src/pages/info/warranty.md"
+        label: "Гарантии"
+        name: "warranty"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "warranty-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Заголовок содержания,
+              name: contentTitle,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Пункт гарантии,
+              name: warrantyList,
+              widget: list,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: text },
+                  {
+                    label: Описание,
+                    name: description,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                  {
+                    label: Таблица,
+                    name: table,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Наименование, name: title, widget: string },
+                        {
+                          label: Срок гарантии,
+                          name: warrantyTime,
+                          widget: string,
+                        },
+                        { label: Срок службы, name: lifeTime, widget: string },
+                      ],
+                    required: false,
+                  },
+                  {
+                    label: Примечание,
+                    name: notes,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Текст, name: text, widget: text },
+                        {
+                          label: Подпункт примечания,
+                          name: sublist,
+                          widget: list,
+                          fields: [{ label: Текст, name: text, widget: text }],
+                        },
+                      ],
+                    required: false,
+                  },
+                ],
+              required: false,
             }

@@ -51,7 +51,7 @@ const PricesPageTemplate = ({ data }) => {
 export default PricesPageTemplate;
 
 export const query = graphql`
-  query pricesPageQuery {
+  query PricesPageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "prices-page" } }) {
       frontmatter {
         pricelist {

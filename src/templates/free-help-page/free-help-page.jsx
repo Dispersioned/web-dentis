@@ -9,21 +9,18 @@ import { PageTitle } from '../../components/ui/page-title';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);
-  const { title, subtitle, description, subsubtitle, freeHelpClinics } = data;
+  const { title, subtitle, description, contentTitle, freeHelpClinics } = data;
 
   return (
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
-      <Paragraph>
-        <Typography>{description}</Typography>
-      </Paragraph>
-
-      <Paragraph>
-        <Typography variant="h5" fontWeight="bold">
-          {subsubtitle}
-        </Typography>
-      </Paragraph>
+      {description.map((data, index) => (
+        <Paragraph key={index}>
+          <Typography>{data.text}</Typography>
+        </Paragraph>
+      ))}
+      <Subtitle text={contentTitle} />
 
       {freeHelpClinics.map((clinic, index) => (
         <Paragraph key={index}>
@@ -46,13 +43,15 @@ const FreeHelpPage = ({ data }) => {
 export default FreeHelpPage;
 
 export const query = graphql`
-  query freeHelpPageQuery {
+  query FreeHelpPageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "free-help-page" } }) {
       frontmatter {
         title
         subtitle
-        description
-        subsubtitle
+        description {
+          text
+        }
+        contentTitle
         freeHelpClinics {
           title
           address
