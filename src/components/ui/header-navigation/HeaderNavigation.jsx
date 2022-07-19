@@ -5,7 +5,7 @@ import React from 'react';
 import { NavLinks } from './style';
 import './style.css';
 
-const HeaderNavigation = ({ items }) => {
+export const HeaderNavigation = ({ items }) => {
   return (
     <nav>
       <NavLinks>
@@ -25,5 +25,3 @@ const HeaderNavigation = ({ items }) => {
     </nav>
   );
 };
-
-export default HeaderNavigation;

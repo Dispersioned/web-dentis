@@ -4,7 +4,7 @@ import { Controller, useForm } from 'react-hook-form';
 
 import { SubmitBtn } from '../header/style';
 
-const HeaderForm = ({ open, handleClose }) => {
+export const HeaderForm = ({ open, handleClose }) => {
   const {
     control,
     register,
@@ -75,5 +75,3 @@ const HeaderForm = ({ open, handleClose }) => {
     </Dialog>
   );
 };
-
-export default HeaderForm;

@@ -1,7 +1,7 @@
 import { TableBody, TableCell, TableRow, Typography } from '@mui/material';
 import React from 'react';
 
-const Body = ({ items }) => {
+export const Body = ({ items }) => {
   console.log(items);
   return (
     <TableBody>
@@ -21,5 +21,3 @@ const Body = ({ items }) => {
     </TableBody>
   );
 };
-
-export default Body;

@@ -2,10 +2,10 @@ import { Typography } from '@mui/material';
 import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
-import Layout from '../../components/Layout';
-import Paragraph from '../../components/info/parapgraph/Paragraph';
-import Subtitle from '../../components/info/subtitle/Subtitle';
-import PageTitle from '../../components/ui/page-title/PageTitle';
+import { Layout } from '../../components/Layout';
+import { Paragraph } from '../../components/info/parapgraph';
+import { Subtitle } from '../../components/info/subtitle';
+import { PageTitle } from '../../components/ui/page-title';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);

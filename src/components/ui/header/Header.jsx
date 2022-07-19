@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
-import HeaderBurger from '../header-burger/HeaderBurger';
-import HeaderForm from '../header-form/HeaderForm';
-import HeaderNavigation from '../header-navigation/HeaderNavigation';
+import { HeaderBurger } from '../header-burger/';
+import { HeaderForm } from '../header-form/';
+import { HeaderNavigation } from '../header-navigation/';
 import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
 
-const Header = () => {
+export const Header = () => {
   const navLinks = [
     { text: 'О нас', to: '/about-us' },
     { text: 'Наши врачи', to: '/specialists' },
@@ -69,5 +69,3 @@ const Header = () => {
     </Wrapper>
   );
 };
-
-export default Header;
