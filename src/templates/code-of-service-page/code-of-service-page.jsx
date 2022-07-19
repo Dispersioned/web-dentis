@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
 import Layout from '../../components/Layout';
-import Paragraph from '../../components/info/parapgraph/Paragraph';
+import { Paragraph } from '../../components/info/parapgraph';
 import Subtitle from '../../components/info/subtitle/Subtitle';
 import PageTitle from '../../components/ui/page-title/PageTitle';
 import alphabetRussian from '../../services/alphabetRussian';
@@ -50,7 +50,7 @@ export const CodeOfServicePageTemplate = ({ data }) => {
 
 const CodeOfServicePage = ({ data }) => {
   console.log(data);
-  return <CodeOfServicePageTemplate props={data.markdownRemark.frontmatter} />;
+  return <CodeOfServicePageTemplate data={data.markdownRemark.frontmatter} />;
 };
 
 export default CodeOfServicePage;

@@ -1,7 +1,10 @@
+import { styled } from '@mui/material';
 import React from 'react';
 
-const Paragraph = ({ children }) => {
-  return <div style={{ marginTop: '1.2rem' }}>{children}</div>;
-};
+const Body = styled('div')`
+  margin-top: 1.2rem;
+`;
 
-export default Paragraph;
+export const Paragraph = ({ children }) => {
+  return <Body>{children}</Body>;
+};
