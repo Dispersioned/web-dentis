@@ -366,15 +366,15 @@ collections:
                 ],
             }
 
-      - file: "src/pages/info/guarantee.md"
+      - file: "src/pages/info/warranty.md"
         label: "Гарантии"
-        name: "guarantee"
+        name: "warranty"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "guarantee-page",
+              default: "warranty-page",
             }
           - { label: Заголовок, name: title, widget: text }
           - {
@@ -391,7 +391,7 @@ collections:
             }
           - {
               label: Пункт гарантии,
-              name: guaranteeList,
+              name: warrantyList,
               widget: list,
               fields:
                 [
@@ -412,7 +412,7 @@ collections:
                         { label: Наименование, name: title, widget: string },
                         {
                           label: Срок гарантии,
-                          name: guaranteeTime,
+                          name: warrantyTime,
                           widget: string,
                         },
                         { label: Срок службы, name: lifeTime, widget: string },

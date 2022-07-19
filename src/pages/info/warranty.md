@@ -1,10 +1,10 @@
 ---
-templateKey: guarantee-page
+templateKey: warranty-page
 title: Гарантии
 subtitle: Гарантийные сроки и сроки службы при оказании стоматологической помощи
   в ООО «ДЕНТиС»
 description: ""
-guaranteeList:
+warrantyList:
   - title: Терапевтическая стоматология
     description: []
     notes:
@@ -17,16 +17,16 @@ guaranteeList:
         sublist: []
     table:
       - title: Пломбы из цементов
-        guaranteeTime: 6 месяцев
+        warrantyTime: 6 месяцев
         lifeTime: 9месяцев
       - title: Пломбы из композитных химического отверждения материалов
-        guaranteeTime: 1 год
+        warrantyTime: 1 год
         lifeTime: 1 год 2 месяца
       - title: Пломбы из композитных материалов
-        guaranteeTime: 1 год
+        warrantyTime: 1 год
         lifeTime: 1 год 2 месяца
       - title: Светового отражения
-        guaranteeTime: 1 год
+        warrantyTime: 1 год
         lifeTime: 1 год 5 месяцев
   - title: Ортопедическая стоматология.
     table: ""
