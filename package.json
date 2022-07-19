@@ -45,7 +45,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "start:playground": "npm run develop",
+    "start:playground": "npm run develop:playground",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "develop:playground": "npm run clean && cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
