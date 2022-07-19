@@ -118,6 +118,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       address: String
       phone: String
     }
+
+    type MarkdownRemarkFrontmatter implements Node {
+      description: [MarkdownRemarkFrontmatterDescription]
+    }
+
+    type MarkdownRemarkFrontmatterDescription implements Node {
+      text: String
+    }
   `;
   createTypes(typeDefs);
 };
