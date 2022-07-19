@@ -46,8 +46,8 @@ collections:
               widget: "hidden",
               default: "inspection-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: controlAuthorities,
@@ -70,8 +70,8 @@ collections:
               widget: "hidden",
               default: "payment-conditions-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: points,
@@ -99,8 +99,8 @@ collections:
               widget: "hidden",
               default: "code-of-service-page",
             }
-          - { label: Заголовок, name: title, widget: text }
-          - { label: Подзаголовок, name: subtitle, widget: text }
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Подзаголовок, name: subtitle, widget: string }
           - {
               label: Список,
               name: terms,
