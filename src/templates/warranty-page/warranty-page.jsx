@@ -14,8 +14,8 @@ export const WarrantyPageTemplate = ({ props }) => {
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
-      {description.map((data) => (
-        <Paragraph>
+      {description.map((data, index) => (
+        <Paragraph key={index}>
           <Typography>{data.text}</Typography>
         </Paragraph>
       ))}
