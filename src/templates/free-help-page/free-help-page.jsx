@@ -20,7 +20,9 @@ export const FreeHelpPageTemplate = ({ data }) => {
       </Paragraph>
 
       <Paragraph>
-        <Typography variant="h5">{subsubtitle}</Typography>
+        <Typography variant="h5" fontWeight="bold">
+          {subsubtitle}
+        </Typography>
       </Paragraph>
 
       {freeHelpClinics.map((clinic, index) => (
