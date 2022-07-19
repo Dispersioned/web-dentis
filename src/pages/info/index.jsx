@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import Layout from '../../components/Layout';
-import PageTitle from '../../components/ui/page-title/PageTitle';
+import { Layout } from '../../components/Layout';
+import { PageTitle } from '../../components/ui/page-title';
 import { Block, Content } from '../../styles/info/style.js';
 
 const InfoIndexPage = () => {
