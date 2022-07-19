@@ -46,7 +46,7 @@ const FreeHelpPage = ({ data }) => {
 export default FreeHelpPage;
 
 export const query = graphql`
-  query freeHelpPageQuery {
+  query FreeHelpPageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "free-help-page" } }) {
       frontmatter {
         title

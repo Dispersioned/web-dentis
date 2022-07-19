@@ -28,7 +28,7 @@ const InspectionPageTemplate = ({ data }) => {
 export default InspectionPageTemplate;
 
 export const query = graphql`
-  query inspectionPageQuery {
+  query InspectionPageQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "inspection-page" } }) {
       frontmatter {
         title
