@@ -9,7 +9,7 @@ import { PageTitle } from '../../components/ui/page-title';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);
-  const { title, subtitle, description, subsubtitle, freeHelpClinics } = data;
+  const { title, subtitle, description, contentTitle, freeHelpClinics } = data;
 
   return (
     <Layout>
@@ -20,7 +20,7 @@ export const FreeHelpPageTemplate = ({ data }) => {
           <Typography>{data.text}</Typography>
         </Paragraph>
       ))}
-      <Subtitle text={subsubtitle} />
+      <Subtitle text={contentTitle} />
 
       {freeHelpClinics.map((clinic, index) => (
         <Paragraph key={index}>
@@ -51,7 +51,7 @@ export const query = graphql`
         description {
           text
         }
-        subsubtitle
+        contentTitle
         freeHelpClinics {
           title
           address

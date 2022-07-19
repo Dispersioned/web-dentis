@@ -8,7 +8,7 @@ import { Subtitle } from '../../components/info/subtitle';
 import { PageTitle } from '../../components/ui/page-title';
 
 export const WarrantyPageTemplate = ({ props }) => {
-  const { title, subtitle, description } = props;
+  const { title, subtitle, description, contentTitle } = props;
 
   return (
     <Layout>
@@ -19,6 +19,7 @@ export const WarrantyPageTemplate = ({ props }) => {
           <Typography>{data.text}</Typography>
         </Paragraph>
       ))}
+      <Subtitle text={contentTitle} />
 
       {/* {points.map((point, index) => (
         <Paragraph key={index}>
@@ -52,6 +53,7 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
+        contentTitle
         description {
           text
         }

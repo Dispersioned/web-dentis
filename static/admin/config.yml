@@ -350,8 +350,8 @@ collections:
               required: false,
             }
           - {
-              label: Заголовок 2,
-              name: subsubtitle,
+              label: Заголовок содержания,
+              name: contentTitle,
               widget: text,
               required: false,
             }
@@ -389,6 +389,12 @@ collections:
               name: description,
               widget: list,
               fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Заголовок содержания,
+              name: contentTitle,
+              widget: string,
               required: false,
             }
           - {
