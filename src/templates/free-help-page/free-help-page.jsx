@@ -9,14 +9,14 @@ import PageTitle from '../../components/ui/page-title/PageTitle';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);
-  const { title, subtitle, descriptions, subsubtitle, freeHelpClinics } = data;
+  const { title, subtitle, description, subsubtitle, freeHelpClinics } = data;
 
   return (
     <Layout>
       <PageTitle text={title} />
       <Subtitle text={subtitle} />
       <Paragraph>
-        <Typography>{descriptions}</Typography>
+        <Typography>{description}</Typography>
       </Paragraph>
 
       <Paragraph>
