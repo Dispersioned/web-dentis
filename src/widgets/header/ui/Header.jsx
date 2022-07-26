@@ -32,40 +32,42 @@ export const Header = () => {
 
   return (
     <Wrapper position="sticky" top={0}>
-      <Content>
-        <Link to="/">
-          <Logo src={logoIcon} alt="logo" />
-        </Link>
-        {size.width > 1400 ? (
-          <>
-            <Navigation items={navLinks} />
-            <Buttons>
-              <ContactBtn variant="text" href="tel:+79385058423">
-                +7 (938) 505 84 23
-              </ContactBtn>
-              <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
-                Записаться
-              </ContactBtn>
-            </Buttons>
-          </>
-        ) : (
-          <>
-            <Burger active={isActive} onClick={() => setIsActive(!isActive)} />
-            <MobileNavigation active={isActive}>
+      <header>
+        <Content>
+          <Link to="/">
+            <Logo src={logoIcon} alt="logo" />
+          </Link>
+          {size.width > 1400 ? (
+            <>
               <Navigation items={navLinks} />
               <Buttons>
-                <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
-                  Записаться
-                </ContactBtn>
                 <ContactBtn variant="text" href="tel:+79385058423">
                   +7 (938) 505 84 23
                 </ContactBtn>
+                <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                  Записаться
+                </ContactBtn>
               </Buttons>
-            </MobileNavigation>
-          </>
-        )}
-        <ContactForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
-      </Content>
+            </>
+          ) : (
+            <>
+              <Burger active={isActive} onClick={() => setIsActive(!isActive)} />
+              <MobileNavigation active={isActive}>
+                <Navigation items={navLinks} />
+                <Buttons>
+                  <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                    Записаться
+                  </ContactBtn>
+                  <ContactBtn variant="text" href="tel:+79385058423">
+                    +7 (938) 505 84 23
+                  </ContactBtn>
+                </Buttons>
+              </MobileNavigation>
+            </>
+          )}
+          <ContactForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
+        </Content>
+      </header>
     </Wrapper>
   );
 };
