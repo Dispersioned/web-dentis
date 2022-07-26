@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
 import { Subtitle } from '../../components/info/subtitle';
 import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);
@@ -16,20 +16,20 @@ export const FreeHelpPageTemplate = ({ data }) => {
       <BasePageTitle text={title} />
       <Subtitle text={subtitle} />
       {description.map((data, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>{data.text}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
       <Subtitle text={contentTitle} />
 
       {freeHelpClinics.map((clinic, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>
             <strong>{`${index + 1}. ${clinic.title}`}</strong>
           </Typography>
           <Typography>{clinic.address}</Typography>
           <Typography>{clinic.phone}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );

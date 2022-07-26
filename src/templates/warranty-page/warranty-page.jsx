@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
 import { Subtitle } from '../../components/info/subtitle';
 import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
 
 export const WarrantyPageTemplate = ({ props }) => {
   const { title, subtitle, description, contentTitle, warrantyList } = props;
@@ -15,14 +15,14 @@ export const WarrantyPageTemplate = ({ props }) => {
       <BasePageTitle text={title} />
       <Subtitle text={subtitle} />
       {description.map((data, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>{data.text}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
       <Subtitle text={contentTitle} />
 
       {warrantyList.map(({ title, description, notes, table }, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>
             <strong>{`${index + 1}. ${title}`}</strong>
           </Typography>
@@ -55,7 +55,7 @@ export const WarrantyPageTemplate = ({ props }) => {
           )}
 
           {notes && (
-            <Paragraph>
+            <BaseParagraph>
               <Typography fontWeight={600}>Примечания:</Typography>
               {notes.map((note, index) => (
                 <React.Fragment key={index}>
@@ -66,9 +66,9 @@ export const WarrantyPageTemplate = ({ props }) => {
                     note.sublist.map((item, noteIndex) => <Typography key={noteIndex}>- {item.text}</Typography>)}
                 </React.Fragment>
               ))}
-            </Paragraph>
+            </BaseParagraph>
           )}
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );

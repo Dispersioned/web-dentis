@@ -5,6 +5,6 @@ const Body = styled('div')`
   margin-top: 1.2rem;
 `;
 
-export const Paragraph = ({ children }) => {
+export const BaseParagraph = ({ children }) => {
   return <Body>{children}</Body>;
 };

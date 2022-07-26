@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
 import { Subtitle } from '../../components/info/subtitle';
 import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
 
 const InspectionPageTemplate = ({ data }) => {
   const { title, subtitle, controlAuthorities } = data.markdownRemark.frontmatter;
@@ -15,11 +15,11 @@ const InspectionPageTemplate = ({ data }) => {
       <BasePageTitle text={title} />
       <Subtitle text={subtitle} />
       {controlAuthorities.map((item, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography style={{ fontWeight: 600 }}>{item.name}</Typography>
           <Typography>{item.address}</Typography>
           <Typography>{item.phone}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );
