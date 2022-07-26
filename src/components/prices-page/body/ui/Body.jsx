@@ -2,7 +2,6 @@ import { TableBody, TableCell, TableRow, Typography } from '@mui/material';
 import React from 'react';
 
 export const Body = ({ items }) => {
-  console.log(items);
   return (
     <TableBody>
       {items.map((item) => (

@@ -1,15 +1,5 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Accordion, Table } from '@mui/material';
 import { graphql } from 'gatsby';
 import React from 'react';
 
