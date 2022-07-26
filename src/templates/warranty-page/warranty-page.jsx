@@ -58,12 +58,12 @@ export const WarrantyPageTemplate = ({ props }) => {
             <Paragraph>
               <Typography fontWeight={600}>Примечания:</Typography>
               {notes.map((note, index) => (
-                <>
-                  <Typography key={index}>
+                <React.Fragment key={index}>
+                  <Typography>
                     <strong>{index + 1}.</strong> {note.text}
                   </Typography>
                   {note.sublist && note.sublist.map((item) => <Typography>- {item.text}</Typography>)}
-                </>
+                </React.Fragment>
               ))}
             </Paragraph>
           )}
