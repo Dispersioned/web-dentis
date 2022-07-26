@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { NavLinks } from '../styles/Navigation';
-import '../styles/Navigation.css';
+import * as S from '../styles/Navigation.module.css';
 
 export const Navigation = ({ items }) => {
   return (
@@ -14,7 +14,7 @@ export const Navigation = ({ items }) => {
             <Link
               to={data.to}
               getProps={({ isPartiallyCurrent }) =>
-                isPartiallyCurrent ? { className: 'navlink active' } : { className: 'navlink' }
+                isPartiallyCurrent ? { className: `${S.navlink} ${S.active}` } : { className: `${S.navlink}` }
               }
             >
               <Typography>{data.text}</Typography>
