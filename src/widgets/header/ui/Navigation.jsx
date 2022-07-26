@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { NavLinks } from '../styles/Navigation';
-import './style.css';
+import '../styles/Navigation.css';
 
 export const Navigation = ({ items }) => {
   return (
