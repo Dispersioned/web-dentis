@@ -3,11 +3,11 @@ import { withPrefix } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
 import '../../../styles/reset.css';
 import { theme } from '../../../styles/theme';
 import { Footer } from '../../../widgets/footer';
 import { Header } from '../../../widgets/header';
-import useSiteMetadata from '../../SiteMetadata';
 
 export const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
