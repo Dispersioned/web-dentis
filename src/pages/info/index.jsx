@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import Layout from '../../components/Layout';
-import PageTitle from '../../components/ui/page-title/PageTitle';
+import { Layout } from '../../components/Layout';
+import { PageTitle } from '../../components/ui/page-title';
 import { Block, Content } from '../../styles/info/style.js';
 
 const InfoIndexPage = () => {
@@ -11,7 +11,7 @@ const InfoIndexPage = () => {
     { text: 'Условия оплаты', link: './payment-conditions' },
     { text: 'Правила оказания услуг', link: './code-of-service' },
     { text: 'Бесплатная помощь', link: './free-help' },
-    { text: 'Гарантии', link: './guaranty' },
+    { text: 'Гарантии', link: './warranty' },
     { text: 'Внутренний порядок', link: './in-order' },
     { text: 'Полис ДМС', link: './dms' },
     { text: 'Лицензии', link: './licenses' },

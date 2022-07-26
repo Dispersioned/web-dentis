@@ -3,6 +3,9 @@ import { createTheme } from '@mui/material';
 export const theme = createTheme({
   typography: {
     fontFamily: 'Nunito, sans-serif',
+    body1: {
+      fontSize: 18,
+    },
   },
   palette: {
     primary: {

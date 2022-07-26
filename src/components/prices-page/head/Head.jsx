@@ -1,7 +1,7 @@
 import { TableCell, TableHead, TableRow, Typography } from '@mui/material';
 import React from 'react';
 
-const Head = ({ items }) => {
+export const Head = ({ items }) => {
   return (
     <TableHead>
       <TableRow>
@@ -16,5 +16,3 @@ const Head = ({ items }) => {
     </TableHead>
   );
 };
-
-export default Head;

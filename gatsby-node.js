@@ -85,3 +85,57 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
   }
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemarkFrontmatterControlAuthorities {
+      name: String
+      address: String
+      phone: String
+    }
+
+    type MarkdownRemarkFrontmatterPoints {
+      title: String
+      text: String
+    }
+
+    type MarkdownRemarkFrontmatterPayMethods {
+      text: String
+    }
+
+    type MarkdownRemarkFrontmatterTermsPoints {
+      text: String
+      subpoints: [MarkdownRemarkFrontmatterTermsPointsSubpoints]
+    }
+
+    type MarkdownRemarkFrontmatterTermsPointsSubpoints {
+      text: String
+    }
+
+    type MarkdownRemarkFrontmatterFreeHelpClinics {
+      title: String
+      address: String
+      phone: String
+    }
+
+    type MarkdownRemarkFrontmatter {
+      description: [MarkdownRemarkFrontmatterDescription]
+    }
+
+    type MarkdownRemarkFrontmatterDescription {
+      text: String
+    }
+
+    type MarkdownRemarkFrontmatterWarrantyListTable {
+      title: String
+      warrantyTime: String
+      lifeTime: String
+    }
+
+    type MarkdownRemarkFrontmatterWarrantyList {
+      table: [MarkdownRemarkFrontmatterWarrantyListTable]
+    }
+  `;
+  createTypes(typeDefs);
+};

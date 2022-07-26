@@ -7,9 +7,9 @@ import '../styles/reset.css';
 import { theme } from '../styles/theme';
 import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
-import Header from './ui/header/Header';
+import { Header } from './ui/header';
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={theme}>
@@ -53,5 +53,3 @@ const Layout = ({ children }) => {
     </ThemeProvider>
   );
 };
-
-export default Layout;

@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
-import HeaderBurger from '../header-burger/HeaderBurger';
-import HeaderForm from '../header-form/HeaderForm';
-import HeaderNavigation from '../header-navigation/HeaderNavigation';
+import { HeaderBurger } from '../header-burger/';
+import { HeaderForm } from '../header-form/';
+import { HeaderNavigation } from '../header-navigation/';
 import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
 
-const Header = () => {
+export const Header = () => {
   const navLinks = [
     { text: 'О нас', to: '/about-us' },
     { text: 'Наши врачи', to: '/specialists' },
@@ -43,7 +43,6 @@ const Header = () => {
               <ContactBtn variant="text" href="tel:+79385058423">
                 +7 (938) 505 84 23
               </ContactBtn>
-              ]
               <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
                 Записаться
               </ContactBtn>
@@ -54,6 +53,14 @@ const Header = () => {
             <HeaderBurger active={isActive} onClick={() => setIsActive(!isActive)} />
             <MobileNavigation active={isActive}>
               <HeaderNavigation items={navLinks} />
+              <Buttons>
+                <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
+                  Записаться
+                </ContactBtn>
+                <ContactBtn variant="text" href="tel:+79385058423">
+                  +7 (938) 505 84 23
+                </ContactBtn>
+              </Buttons>
             </MobileNavigation>
           </>
         )}
@@ -62,5 +69,3 @@ const Header = () => {
     </Wrapper>
   );
 };
-
-export default Header;
