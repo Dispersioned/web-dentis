@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Body } from './style';
+import { Body } from '../styles/Burger';
 
-export const HeaderBurger = ({ active, onClick }) => {
+export const Burger = ({ active, onClick }) => {
   return (
     <Body active={active} onClick={onClick}>
       <span />

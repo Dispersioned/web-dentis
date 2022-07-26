@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet';
 
 import '../styles/reset.css';
 import { theme } from '../styles/theme';
+import { Header } from '../widgets/header';
 import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
-import { Header } from './ui/header';
 
 export const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();

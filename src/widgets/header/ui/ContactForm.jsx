@@ -2,9 +2,9 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Typograph
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 
-import { SubmitBtn } from '../header/style';
+import { SubmitBtn } from '../styles/Header';
 
-export const HeaderForm = ({ open, handleClose }) => {
+export const ContactForm = ({ open, handleClose }) => {
   const {
     control,
     register,

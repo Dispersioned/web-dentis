@@ -6,10 +6,10 @@ import { useForm } from 'react-hook-form';
 
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import logoIcon from '../../../img/dentis/logo.svg';
-import { HeaderBurger } from '../header-burger/';
-import { HeaderForm } from '../header-form/';
-import { HeaderNavigation } from '../header-navigation/';
-import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from './style';
+import { Buttons, ContactBtn, Content, Logo, MobileNavigation, Wrapper } from '../styles/Header';
+import { Burger } from './Burger';
+import { ContactForm } from './ContactForm';
+import { Navigation } from './Navigation';
 
 export const Header = () => {
   const navLinks = [
@@ -38,7 +38,7 @@ export const Header = () => {
         </Link>
         {size.width > 1400 ? (
           <>
-            <HeaderNavigation items={navLinks} />
+            <Navigation items={navLinks} />
             <Buttons>
               <ContactBtn variant="text" href="tel:+79385058423">
                 +7 (938) 505 84 23
@@ -50,9 +50,9 @@ export const Header = () => {
           </>
         ) : (
           <>
-            <HeaderBurger active={isActive} onClick={() => setIsActive(!isActive)} />
+            <Burger active={isActive} onClick={() => setIsActive(!isActive)} />
             <MobileNavigation active={isActive}>
-              <HeaderNavigation items={navLinks} />
+              <Navigation items={navLinks} />
               <Buttons>
                 <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
                   Записаться
@@ -64,7 +64,7 @@ export const Header = () => {
             </MobileNavigation>
           </>
         )}
-        <HeaderForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
+        <ContactForm open={isFormOpen} handleClose={() => setIsFormOpen(false)} />
       </Content>
     </Wrapper>
   );

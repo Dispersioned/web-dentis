@@ -2,10 +2,10 @@ import { Typography } from '@mui/material';
 import { Link } from 'gatsby';
 import React from 'react';
 
-import { NavLinks } from './style';
+import { NavLinks } from '../styles/Navigation';
 import './style.css';
 
-export const HeaderNavigation = ({ items }) => {
+export const Navigation = ({ items }) => {
   return (
     <nav>
       <NavLinks>
