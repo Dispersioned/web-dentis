@@ -5,8 +5,8 @@ import { Helmet } from 'react-helmet';
 
 import '../styles/reset.css';
 import { theme } from '../styles/theme';
+import { Footer } from '../widgets/footer';
 import { Header } from '../widgets/header';
-import Footer from './Footer';
 import useSiteMetadata from './SiteMetadata';
 
 export const Layout = ({ children }) => {
