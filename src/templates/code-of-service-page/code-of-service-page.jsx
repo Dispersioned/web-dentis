@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
-import { Subtitle } from '../../components/info/subtitle';
-import { PageTitle } from '../../components/ui/page-title';
 import alphabetRussian from '../../services/alphabetRussian';
 import romanize from '../../services/romanize';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
+import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
 const getPointIndex = () => {
   let index = 1;
@@ -24,10 +24,10 @@ export const CodeOfServicePageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <PageTitle text={title} />
-      <Subtitle text={subtitle} />
+      <BasePageTitle text={title} />
+      <BaseSubtitle text={subtitle} />
       {terms.map((term, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography variant="h6">
             <strong>{`${romanize(index + 1)}. ${term.title}`}</strong>
           </Typography>
@@ -42,7 +42,7 @@ export const CodeOfServicePageTemplate = ({ data }) => {
               </div>
             </div>
           ))}
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );

@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
-import { Subtitle } from '../../components/info/subtitle';
-import { PageTitle } from '../../components/ui/page-title';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
+import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
 export const FreeHelpPageTemplate = ({ data }) => {
   console.log(data);
@@ -13,23 +13,23 @@ export const FreeHelpPageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <PageTitle text={title} />
-      <Subtitle text={subtitle} />
+      <BasePageTitle text={title} />
+      <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>{data.text}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
-      <Subtitle text={contentTitle} />
+      <BaseSubtitle text={contentTitle} />
 
       {freeHelpClinics.map((clinic, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>
             <strong>{`${index + 1}. ${clinic.title}`}</strong>
           </Typography>
           <Typography>{clinic.address}</Typography>
           <Typography>{clinic.phone}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );

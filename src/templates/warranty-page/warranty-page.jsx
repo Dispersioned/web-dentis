@@ -3,26 +3,26 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { Layout } from '../../components/Layout';
-import { Paragraph } from '../../components/info/parapgraph';
-import { Subtitle } from '../../components/info/subtitle';
-import { PageTitle } from '../../components/ui/page-title';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
+import { BaseParagraph } from '../../shared/ui/base-paragraph';
+import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
 export const WarrantyPageTemplate = ({ props }) => {
   const { title, subtitle, description, contentTitle, warrantyList } = props;
 
   return (
     <Layout>
-      <PageTitle text={title} />
-      <Subtitle text={subtitle} />
+      <BasePageTitle text={title} />
+      <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>{data.text}</Typography>
-        </Paragraph>
+        </BaseParagraph>
       ))}
-      <Subtitle text={contentTitle} />
+      <BaseSubtitle text={contentTitle} />
 
       {warrantyList.map(({ title, description, notes, table }, index) => (
-        <Paragraph key={index}>
+        <BaseParagraph key={index}>
           <Typography>
             <strong>{`${index + 1}. ${title}`}</strong>
           </Typography>
@@ -55,19 +55,20 @@ export const WarrantyPageTemplate = ({ props }) => {
           )}
 
           {notes && (
-            <Paragraph>
+            <BaseParagraph>
               <Typography fontWeight={600}>Примечания:</Typography>
               {notes.map((note, index) => (
-                <>
-                  <Typography key={index}>
+                <React.Fragment key={index}>
+                  <Typography>
                     <strong>{index + 1}.</strong> {note.text}
                   </Typography>
-                  {note.sublist && note.sublist.map((item) => <Typography>- {item.text}</Typography>)}
-                </>
+                  {note.sublist &&
+                    note.sublist.map((item, noteIndex) => <Typography key={noteIndex}>- {item.text}</Typography>)}
+                </React.Fragment>
               ))}
-            </Paragraph>
+            </BaseParagraph>
           )}
-        </Paragraph>
+        </BaseParagraph>
       ))}
     </Layout>
   );
