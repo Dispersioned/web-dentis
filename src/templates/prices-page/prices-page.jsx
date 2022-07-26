@@ -17,7 +17,7 @@ import { Layout } from '../../components/Layout';
 import { Subtitle } from '../../components/info/subtitle';
 import { Body } from '../../components/prices-page/body';
 import { Head } from '../../components/prices-page/head';
-import { PageTitle } from '../../components/ui/page-title';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { Details, Heading, Summary } from './style';
 
 const PricesPageTemplate = ({ data }) => {
@@ -25,7 +25,7 @@ const PricesPageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <PageTitle text="Прайс" />
+      <BasePageTitle text="Прайс" />
       {pricelist.map((service) => (
         <Accordion key={service.title}>
           <Summary expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}>

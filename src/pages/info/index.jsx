@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { Layout } from '../../components/Layout';
-import { PageTitle } from '../../components/ui/page-title';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { Block, Content } from '../../styles/info/style.js';
 
 const InfoIndexPage = () => {
@@ -20,7 +20,7 @@ const InfoIndexPage = () => {
 
   return (
     <Layout>
-      <PageTitle text="Клиентам" />
+      <BasePageTitle text="Клиентам" />
       <Content>
         {blocks.map((block) => (
           <Block key={block.text} variant="contained" component={Link} to={block.link}>

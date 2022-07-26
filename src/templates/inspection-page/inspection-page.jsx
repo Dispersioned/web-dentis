@@ -5,14 +5,14 @@ import React from 'react';
 import { Layout } from '../../components/Layout';
 import { Paragraph } from '../../components/info/parapgraph';
 import { Subtitle } from '../../components/info/subtitle';
-import { PageTitle } from '../../components/ui/page-title';
+import { BasePageTitle } from '../../shared/ui/base-page-title';
 
 const InspectionPageTemplate = ({ data }) => {
   const { title, subtitle, controlAuthorities } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
-      <PageTitle text={title} />
+      <BasePageTitle text={title} />
       <Subtitle text={subtitle} />
       {controlAuthorities.map((item, index) => (
         <Paragraph key={index}>
