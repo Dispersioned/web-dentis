@@ -501,3 +501,45 @@ collections:
                 ],
               required: false,
             }
+
+      - file: "src/pages/info/dms.md"
+        label: "Полис ДМС"
+        name: "dms"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "dms-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Пункт списка,
+              name: partners,
+              widget: list,
+              fields:
+                [
+                  { label: Вид компании, name: type, widget: string },
+                  { label: Название, name: title, widget: string },
+                  {
+                    label: Ссылка на страницу компании,
+                    name: link,
+                    widget: string,
+                    required: false,
+                  },
+                ],
+              required: false,
+            }
