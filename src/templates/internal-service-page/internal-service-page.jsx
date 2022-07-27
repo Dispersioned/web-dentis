@@ -3,12 +3,13 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import { Layout } from '../../components/Layout';
+import romanize from '../../services/romanize';
 import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
 export const InternalServicePageTemplate = ({ props }) => {
-  const { title, subtitle, description, contentTitle, warrantyList } = props;
+  const { title, subtitle, description, internalOrderList } = props;
 
   return (
     <Layout>
@@ -19,8 +20,24 @@ export const InternalServicePageTemplate = ({ props }) => {
           <Typography>{data.text}</Typography>
         </BaseParagraph>
       ))}
-      <BaseSubtitle text={contentTitle} />
-      text
+      {internalOrderList.map((item, index) => (
+        <BaseParagraph key={index}>
+          <Typography fontWeight="bold" variant="h6" textTransform="uppercase">{`${romanize(index + 1)}. ${
+            item.title
+          }`}</Typography>
+          {item.description &&
+            item.description.map((data, innerIndex) => <Typography key={innerIndex}>{data.text}</Typography>)}
+          {item.points &&
+            item.points.map((point, innerIndex) => (
+              <Typography key={innerIndex}>
+                <strong>
+                  {index + 1}.{innerIndex + 1}.
+                </strong>{' '}
+                {point.text}
+              </Typography>
+            ))}
+        </BaseParagraph>
+      ))}
     </Layout>
   );
 };
@@ -38,9 +55,17 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
-        contentTitle
         description {
           text
+        }
+        internalOrderList {
+          title
+          points {
+            text
+          }
+          description {
+            text
+          }
         }
       }
     }
