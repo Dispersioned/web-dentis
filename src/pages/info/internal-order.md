@@ -1,3 +1,0 @@
----
-templateKey: internal-order-page
----

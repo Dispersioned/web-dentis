@@ -7,7 +7,7 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const InternalOrderPageTemplate = ({ props }) => {
+export const InternalServicePageTemplate = ({ props }) => {
   const { title, subtitle, description, contentTitle, warrantyList } = props;
 
   return (
@@ -25,16 +25,16 @@ export const InternalOrderPageTemplate = ({ props }) => {
   );
 };
 
-const InternalOrderPage = ({ data }) => {
+const InternalServicePage = ({ data }) => {
   console.log(data);
-  return <InternalOrderPageTemplate props={data.markdownRemark.frontmatter} />;
+  return <InternalServicePageTemplate props={data.markdownRemark.frontmatter} />;
 };
 
-export default InternalOrderPage;
+export default InternalServicePage;
 
 export const query = graphql`
-  query InternalOrderPageQuery {
-    markdownRemark(frontmatter: { templateKey: { eq: "internal-order-page" } }) {
+  query InternalServicePageQuery {
+    markdownRemark(frontmatter: { templateKey: { eq: "internal-service-page" } }) {
       frontmatter {
         title
         subtitle
