@@ -14,7 +14,7 @@ import { Navigation } from './Navigation';
 export const Header = () => {
   const navLinks = [
     { text: 'О нас', to: '/about-us' },
-    { text: 'Наши врачи', to: '/specialists' },
+    { text: 'Врачи', to: '/specialists' },
     { text: 'Услуги', to: '/services' },
     { text: 'Цены', to: '/prices' },
     { text: 'Клиентам', to: '/info' },
