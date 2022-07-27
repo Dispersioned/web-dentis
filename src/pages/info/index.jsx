@@ -14,8 +14,8 @@ const InfoIndexPage = () => {
     { text: 'Гарантии', link: './warranty' },
     { text: 'Внутренний распорядок', link: './internal-service' },
     { text: 'Полис ДМС', link: './dms' },
-    { text: 'Лицензии', link: './licenses' },
-    { text: 'Вакансии', link: './career' },
+    { text: 'Лицензии', link: './license' },
+    // { text: 'Вакансии', link: './career' },
   ];
 
   return (
