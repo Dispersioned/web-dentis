@@ -446,3 +446,58 @@ collections:
                 ],
               required: false,
             }
+
+      - file: "src/pages/info/internal-order.md"
+        label: "Внутренний порядок"
+        name: "internal-order"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "internal-order-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Заголовок содержания,
+              name: contentTitle,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Пункт списка,
+              name: internalOrderList,
+              widget: list,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: text },
+                  {
+                    label: Описание,
+                    name: description,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                  {
+                    label: Подпункт списка,
+                    name: points,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                ],
+              required: false,
+            }
