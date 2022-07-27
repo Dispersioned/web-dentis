@@ -12,7 +12,7 @@ const InfoIndexPage = () => {
     { text: 'Правила оказания услуг', link: './code-of-service' },
     { text: 'Бесплатная помощь', link: './free-help' },
     { text: 'Гарантии', link: './warranty' },
-    { text: 'Внутренний порядок', link: './in-order' },
+    { text: 'Внутренний распорядок', link: './internal-service' },
     { text: 'Полис ДМС', link: './dms' },
     { text: 'Лицензии', link: './licenses' },
     { text: 'Вакансии', link: './career' },
