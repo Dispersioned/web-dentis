@@ -7,11 +7,11 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-const InspectionPageTemplate = ({ data }) => {
+const InspectionPageTemplate = ({ data, location }) => {
   const { title, subtitle, controlAuthorities } = data.markdownRemark.frontmatter;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {controlAuthorities.map((item, index) => (

@@ -2,17 +2,18 @@ import { Typography } from '@mui/material';
 import { Link } from 'gatsby';
 import React from 'react';
 
+import { ROUTES } from '../../../config';
 import { NavLinks } from '../styles/Navigation';
 import * as S from '../styles/Navigation.module.css';
 
-export const Navigation = ({ items }) => {
+export const Navigation = () => {
   return (
     <nav>
       <NavLinks>
-        {items.map((data) => (
+        {ROUTES.map((data) => (
           <li key={data.text}>
             <Link
-              to={data.to}
+              to={`/${data.to}`}
               getProps={({ isPartiallyCurrent }) =>
                 isPartiallyCurrent ? { className: `${S.navlink} ${S.active}` } : { className: `${S.navlink}` }
               }

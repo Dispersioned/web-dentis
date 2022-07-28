@@ -8,11 +8,11 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const InternalServicePageTemplate = ({ props }) => {
-  const { title, subtitle, description, internalOrderList } = props;
+export const InternalServicePageTemplate = ({ data, location }) => {
+  const { title, subtitle, description, internalOrderList } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
@@ -42,9 +42,9 @@ export const InternalServicePageTemplate = ({ props }) => {
   );
 };
 
-const InternalServicePage = ({ data }) => {
+const InternalServicePage = ({ data, location }) => {
   console.log(data);
-  return <InternalServicePageTemplate props={data.markdownRemark.frontmatter} />;
+  return <InternalServicePageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default InternalServicePage;

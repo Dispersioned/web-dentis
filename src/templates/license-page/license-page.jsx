@@ -9,12 +9,12 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const LicensePageTemplate = ({ props }) => {
-  const { title, subtitle, description, worksAndServices, license } = props;
+export const LicensePageTemplate = ({ data, location }) => {
+  const { title, subtitle, description, worksAndServices, license } = data;
   const size = useWindowSize();
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
@@ -49,9 +49,9 @@ export const LicensePageTemplate = ({ props }) => {
   );
 };
 
-const LicensePage = ({ data }) => {
+const LicensePage = ({ data, location }) => {
   console.log(data);
-  return <LicensePageTemplate props={data.markdownRemark.frontmatter} />;
+  return <LicensePageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default LicensePage;

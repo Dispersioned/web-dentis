@@ -7,11 +7,11 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const PaymentConditionsPageTemplate = ({ props }) => {
-  const { title, subtitle, points, payMethods } = props;
+export const PaymentConditionsPageTemplate = ({ data, location }) => {
+  const { title, subtitle, points, payMethods } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {points.map((point, index) => (
@@ -33,9 +33,9 @@ export const PaymentConditionsPageTemplate = ({ props }) => {
   );
 };
 
-const PaymentConditionsPage = ({ data }) => {
+const PaymentConditionsPage = ({ data, location }) => {
   console.log(data);
-  return <PaymentConditionsPageTemplate props={data.markdownRemark.frontmatter} />;
+  return <PaymentConditionsPageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default PaymentConditionsPage;

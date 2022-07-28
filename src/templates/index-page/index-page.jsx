@@ -7,11 +7,11 @@ export const IndexPageTemplate = () => {
   return <div>text</div>;
 };
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   // const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <IndexPageTemplate />
     </Layout>
   );

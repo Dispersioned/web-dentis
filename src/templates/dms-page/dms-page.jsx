@@ -7,11 +7,11 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const DmsPageTemplate = ({ props }) => {
-  const { title, subtitle, description, partners } = props;
+export const DmsPageTemplate = ({ data, location }) => {
+  const { title, subtitle, description, partners } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
@@ -38,9 +38,9 @@ export const DmsPageTemplate = ({ props }) => {
   );
 };
 
-const DmsPage = ({ data }) => {
+const DmsPage = ({ data, location }) => {
   console.log(data);
-  return <DmsPageTemplate props={data.markdownRemark.frontmatter} />;
+  return <DmsPageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default DmsPage;

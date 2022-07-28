@@ -12,16 +12,6 @@ import { ContactForm } from './ContactForm';
 import { Navigation } from './Navigation';
 
 export const Header = () => {
-  const navLinks = [
-    { text: 'О нас', to: '/about-us' },
-    { text: 'Врачи', to: '/specialists' },
-    { text: 'Услуги', to: '/services' },
-    { text: 'Цены', to: '/prices' },
-    { text: 'Клиентам', to: '/info' },
-    { text: 'Акции', to: '/offers' },
-    { text: 'Фотогалерея', to: '/photos' },
-  ];
-
   const [isActive, setIsActive] = useState(false);
   useEffect(() => {
     document.body.style.overflow = isActive ? 'hidden' : 'auto';
@@ -39,7 +29,7 @@ export const Header = () => {
           </Link>
           {size.width > 1400 ? (
             <>
-              <Navigation items={navLinks} />
+              <Navigation />
               <Buttons>
                 <ContactBtn variant="text" href="tel:+79385058423">
                   +7 (938) 505 84 23
@@ -53,7 +43,7 @@ export const Header = () => {
             <>
               <Burger active={isActive} onClick={() => setIsActive(!isActive)} />
               <MobileNavigation active={isActive}>
-                <Navigation items={navLinks} />
+                <Navigation />
                 <Buttons>
                   <ContactBtn onClick={() => setIsFormOpen(true)} variant="contained">
                     Записаться

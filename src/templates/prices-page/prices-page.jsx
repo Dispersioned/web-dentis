@@ -9,11 +9,11 @@ import { Head } from '../../components/prices-page/head';
 import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { Details, Heading, Summary } from './style';
 
-const PricesPageTemplate = ({ data }) => {
+const PricesPageTemplate = ({ data, location }) => {
   const pricelist = data.markdownRemark.frontmatter.pricelist;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text="Прайс" />
       {pricelist.map((service) => (
         <Accordion key={service.title}>

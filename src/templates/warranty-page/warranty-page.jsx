@@ -7,11 +7,11 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const WarrantyPageTemplate = ({ props }) => {
-  const { title, subtitle, description, contentTitle, warrantyList } = props;
+export const WarrantyPageTemplate = ({ data, location }) => {
+  const { title, subtitle, description, contentTitle, warrantyList } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
@@ -74,9 +74,9 @@ export const WarrantyPageTemplate = ({ props }) => {
   );
 };
 
-const WarrantyPage = ({ data }) => {
+const WarrantyPage = ({ data, location }) => {
   console.log(data);
-  return <WarrantyPageTemplate props={data.markdownRemark.frontmatter} />;
+  return <WarrantyPageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default WarrantyPage;
