@@ -7,12 +7,12 @@ import { BasePageTitle } from '../../shared/ui/base-page-title';
 import { BaseParagraph } from '../../shared/ui/base-paragraph';
 import { BaseSubtitle } from '../../shared/ui/base-subtitle';
 
-export const FreeHelpPageTemplate = ({ data }) => {
+export const FreeHelpPageTemplate = ({ data, location }) => {
   console.log(data);
   const { title, subtitle, description, contentTitle, freeHelpClinics } = data;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {description.map((data, index) => (
@@ -35,9 +35,9 @@ export const FreeHelpPageTemplate = ({ data }) => {
   );
 };
 
-const FreeHelpPage = ({ data }) => {
+const FreeHelpPage = ({ data, location }) => {
   console.log(data);
-  return <FreeHelpPageTemplate data={data.markdownRemark.frontmatter} />;
+  return <FreeHelpPageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default FreeHelpPage;

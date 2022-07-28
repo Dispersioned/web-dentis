@@ -6,10 +6,11 @@ import { Helmet } from 'react-helmet';
 import { useSiteMetadata } from '../../../hooks/useSiteMetadata';
 import '../../../styles/reset.css';
 import { theme } from '../../../styles/theme';
+import { Breadcrumbs } from '../../../widgets/breadcrumbs';
 import { Footer } from '../../../widgets/footer';
 import { Header } from '../../../widgets/header';
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, location }) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={theme}>
@@ -47,7 +48,10 @@ export const Layout = ({ children }) => {
           <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
         </Helmet>
         <Header />
-        <Container maxWidth="lg">{children}</Container>
+        <Container maxWidth="lg">
+          <Breadcrumbs location={location} />
+          {children}
+        </Container>
         <Footer />
       </div>
     </ThemeProvider>

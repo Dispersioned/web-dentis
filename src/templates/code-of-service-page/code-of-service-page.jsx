@@ -17,13 +17,13 @@ const getPointIndex = () => {
   };
 };
 
-export const CodeOfServicePageTemplate = ({ data }) => {
+export const CodeOfServicePageTemplate = ({ data, location }) => {
   const { title, subtitle, terms } = data;
 
   const counter = getPointIndex();
 
   return (
-    <Layout>
+    <Layout location={location}>
       <BasePageTitle text={title} />
       <BaseSubtitle text={subtitle} />
       {terms.map((term, index) => (
@@ -48,9 +48,8 @@ export const CodeOfServicePageTemplate = ({ data }) => {
   );
 };
 
-const CodeOfServicePage = ({ data }) => {
-  console.log(data);
-  return <CodeOfServicePageTemplate data={data.markdownRemark.frontmatter} />;
+const CodeOfServicePage = ({ data, location }) => {
+  return <CodeOfServicePageTemplate data={data.markdownRemark.frontmatter} location={location} />;
 };
 
 export default CodeOfServicePage;
