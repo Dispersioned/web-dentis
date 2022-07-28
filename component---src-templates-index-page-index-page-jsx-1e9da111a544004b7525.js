@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_netlify_cms=self.webpackChunkgatsby_starter_netlify_cms||[]).push([[605],{3911:function(e,t,n){n.r(t),n.d(t,{IndexPageTemplate:function(){return l}});n(1597);var r=n(7294),a=n(1058),l=function(){return r.createElement("div",null,"text")};t.default=function(e){e.data;return r.createElement(a.A,null,r.createElement(l,null))}}}]);
+//# sourceMappingURL=component---src-templates-index-page-index-page-jsx-1e9da111a544004b7525.js.map

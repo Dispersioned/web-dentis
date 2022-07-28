@@ -350,8 +350,8 @@ collections:
               required: false,
             }
           - {
-              label: Заголовок 2,
-              name: subsubtitle,
+              label: Заголовок содержания,
+              name: contentTitle,
               widget: text,
               required: false,
             }
@@ -445,4 +445,148 @@ collections:
                   },
                 ],
               required: false,
+            }
+
+      - file: "src/pages/info/internal-service.md"
+        label: "Внутренний распорядок"
+        name: "internal-service"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "internal-service-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Заголовок содержания,
+              name: contentTitle,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Пункт списка,
+              name: internalOrderList,
+              widget: list,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: text },
+                  {
+                    label: Описание,
+                    name: description,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                  {
+                    label: Подпункт списка,
+                    name: points,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                    required: false,
+                  },
+                ],
+              required: false,
+            }
+
+      - file: "src/pages/info/dms.md"
+        label: "Полис ДМС"
+        name: "dms"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "dms-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Пункт списка,
+              name: partners,
+              widget: list,
+              fields:
+                [
+                  { label: Вид компании, name: type, widget: string },
+                  { label: Название, name: title, widget: string },
+                  {
+                    label: Ссылка на страницу компании,
+                    name: link,
+                    widget: string,
+                    required: false,
+                  },
+                ],
+              required: false,
+            }
+
+      - file: "src/pages/info/license.md"
+        label: "Лицензии"
+        name: "license"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "license-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Реквизиты,
+              name: worksAndServices,
+              widget: object,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: string },
+                  {
+                    label: Пункт списка,
+                    name: list,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                  },
+                ],
+              required: false,
+            }
+          - {
+              label: Фотография,
+              name: license,
+              widget: list,
+              fields: [{ label: Фото, name: photo, widget: image }],
             }
