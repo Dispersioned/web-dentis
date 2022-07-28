@@ -543,3 +543,50 @@ collections:
                 ],
               required: false,
             }
+
+      - file: "src/pages/info/license.md"
+        label: "Лицензии"
+        name: "license"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "license-page",
+            }
+          - { label: Заголовок, name: title, widget: text }
+          - {
+              label: Подзаголовок,
+              name: subtitle,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Описание,
+              name: description,
+              widget: list,
+              fields: [{ label: Текст, name: text, widget: text }],
+              required: false,
+            }
+          - {
+              label: Реквизиты,
+              name: worksAndServices,
+              widget: object,
+              fields:
+                [
+                  { label: Заголовок, name: title, widget: string },
+                  {
+                    label: Пункт списка,
+                    name: list,
+                    widget: list,
+                    fields: [{ label: Текст, name: text, widget: text }],
+                  },
+                ],
+              required: false,
+            }
+          - {
+              label: Фотография,
+              name: license,
+              widget: list,
+              fields: [{ label: Фото, name: photo, widget: image }],
+            }
